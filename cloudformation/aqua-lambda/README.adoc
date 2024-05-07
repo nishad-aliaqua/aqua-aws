@@ -40,7 +40,7 @@ When completed, you can obtain the generated `AQUA_SQS_URL` from the outputs tab
 
 [source,options="nowrap",subs="attributes"]
 ----
-aws --region us-east-1 cloudformation create-stack --capabilities CAPABILITY_NAMED_IAM \
+aws --region us-east-1 cloudformation create-stack --capabilities CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \
     --stack-name aqua-serverless-audit --template-body file://aquaServerless.yaml \
     --parameters ParameterKey=AquaGatewayAddress,ParameterValue=x.x.x.x:8443 \
                  ParameterKey=AquaToken,ParameterValue=xxxx \
